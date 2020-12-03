@@ -1,11 +1,11 @@
 body {
-    background-color: rgb(201, 231, 217);
+    background-color:  rgb(44, 29, 68);
     color: rgb(235, 227, 217);
 }
 
 .form-control,
 .form-control:focus {
-    background-color: rgb(216, 232, 248);
+    background-color: rgb(95, 61, 146);
 }
 
 .jumbo-color {
