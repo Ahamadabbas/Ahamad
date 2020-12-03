@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <p style="color: rgb(205, 255, 67);font-size: 24px;font-weight: bold;"> School Student List || </p>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    <p style="color:rgb(233, 228, 164);font-size:22px;"> Student </p> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;"> About </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contant' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;">contant </p>
+                </a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;">Add StudentList </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'forgot' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;">Forgot Password </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;">Logout</p>
+                </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;"> Teacher Signup </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">
+                    <p style="color:rgb(233, 228, 164);font-size:20px;"> Teacher Login </p>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
